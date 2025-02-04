@@ -1,0 +1,111 @@
+/*Algemene opmaak voor de body*/
+.body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/*Algemene opmaak voor de tabel en invoervelden*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody {
+  text-align: center;
+}
+
+tr {
+  border-bottom: 1px solid #3449a3;
+  height: 50px;
+}
+
+.input_vetgedrukt {
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #3449a3;
+}
+
+input {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+/* Maak de eerste rij sticky aan de bovenkant */
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Zorg ervoor dat de rij boven andere elementen blijft staan */
+  border-bottom: 1px solid #3449a3;
+  background-color: #fff;
+}
+
+/* Maak de eerste drie kolommen sticky aan de linkerkant */
+/* Hole kolom */
+th:nth-child(1),
+td:nth-child(1) {
+  min-width: 75px;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+  border: none;
+}
+
+/* Par kolom */
+th:nth-child(2),
+td:nth-child(2) {
+  min-width: 75px;
+  position: sticky;
+  left: 75px;
+  z-index: 2;
+  background-color: #fff;
+  border: none;
+}
+
+/* Handicap kolom */
+th:nth-child(3),
+td:nth-child(3) {
+  min-width: 75px;
+  position: sticky;
+  left: 150px;
+  z-index: 2;
+  background-color: #fff;
+  border: none;
+}
+
+/* Geef (alleen) de 'spelerskolommen' omstebeurt een andere kleur */
+td:nth-child(even):not(:nth-child(-n + 3)):not(tr:nth-child(10) *):not(
+    tr:nth-child(20) *
+  ):not(tr:nth-child(21) *) {
+  background-color: #d6eeee;
+}
+
+/* Geef rijen OUT en IN een andere achtergrondkleur */
+tr:nth-child(10),
+tr:nth-child(20) {
+  background-color: #d9e0ff;
+}
+
+/* Geef rij TOTAL een andere achtergrondkleur */
+tr:nth-child(21) {
+  background-color: #b9b9fa;
+}
+
+/* Zorg dat de 'sticky-cellen' in de IN en OUT rijen dezelfde kleur krijgen */
+tr:nth-child(10) td:nth-child(-n + 3),
+tr:nth-child(20) td:nth-child(-n + 3),
+tr:nth-child(10) th:nth-child(-n + 3),
+tr:nth-child(20) th:nth-child(-n + 3) {
+  background-color: #d9e0ff;
+}
+
+/* Zorg dat de 'sticky-cellen' in de TOTAL rij dezelfde kleur krijgen */
+tr:nth-child(21) td:nth-child(-n + 3),
+tr:nth-child(21) th:nth-child(-n + 3) {
+  background-color: #b9b9fa;
+}
