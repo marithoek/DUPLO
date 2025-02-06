@@ -13,7 +13,7 @@
         <tr>
           <th>Hole</th>
           <th>Par</th>
-          <th>Handicap</th>
+          <th>Hcp</th>
           <th><input type="text" name="naam1" class="input_vetgedrukt" /></th>
           <th><input type="text" name="naam2" class="input_vetgedrukt" /></th>
           <th><input type="text" name="naam3" class="input_vetgedrukt" /></th>
@@ -24,7 +24,7 @@
       <tbody>
         <!-- Hole 1-->
         <tr>
-          <td>1</td>
+          <td><a href="#image1">1</a></td>
           <td>4</td>
           <td>8</td>
           <td><input type="number" name="punten1_1" step="1" min="0" /></td>
@@ -115,7 +115,7 @@
         <!-- OUT-->
         <tr>
           <td></td>
-          <td>OUT</td>
+          <th>OUT</th>
           <td></td>
           <td><input type="number" name="OUT1" step="1" min="0" /></td>
           <td><input type="number" name="OUT2" step="1" min="0" /></td>
@@ -215,7 +215,7 @@
         <!-- IN-->
         <tr>
           <td></td>
-          <td>IN</td>
+          <th>IN</th>
           <td></td>
           <td><input type="number" name="IN1" step="1" min="0" /></td>
           <td><input type="number" name="IN2" step="1" min="0" /></td>
@@ -225,7 +225,7 @@
         <!-- TOTAL-->
         <tr>
           <td></td>
-          <td>TOTAL</td>
+          <th>TOTAL</th>
           <td></td>
           <td><input type="number" name="TOTAL1" step="1" min="0" /></td>
           <td><input type="number" name="TOTAL2" step="1" min="0" /></td>
@@ -234,5 +234,13 @@
         </tr>
       </tbody>
     </table>
+
+    <!-- Afbeelding weergave -->
+    <div id="image1" class="modal">
+      <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <img src="images/holes/hole1.png" alt="Hole 1" />
+      </div>
+    </div>
   </body>
 </html>
